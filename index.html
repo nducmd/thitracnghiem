@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Hệ Thống Thi Trắc Nghiệm</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" />
+
+    <!--- link custom style --->
+    <link rel="stylesheet" href="./assets/css/reset-g.css" />
+    <link rel="stylesheet" href="./assets/css/styles-g.css" />
+
+    <!--- link google fonts --->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--- link remix icon --->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/909864e3da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section>
+      <div id="login" class="container">
+        <form onsubmit="return checkLogin()">
+          <h2>Đăng nhập</h2>
+          <div class="input-field">
+            <span class="icon"><i class="ri-user-3-fill"></i></span>
+            <input id="usernameLogin" type="username" required />
+            <label>Tên đăng nhập</label>
+          </div>
+          <div class="input-field">
+            <span class="icon"><i class="ri-eye-close-line"></i></span>
+            <input id="passwordLogin" type="password" required />
+            <label>Mật khẩu</label>
+          </div>
+          <div class="forgot">
+            <a href="">Quên mật khẩu?</a>
+          </div>
+          <button type="submit">Đăng nhập</button>
+          <div class="swap">
+            <p>
+              Chưa có tài khoản? <a href="#" onclick="register()">Đăng ký</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div id="register" class="container">
+        <form action="">
+          <h2>Đăng ký</h2>
+          <div class="input-field" id="username">
+            <span class="icon"><i class="ri-user-3-fill"></i></span>
+            <input
+              id="username"
+              type="username"
+              required
+              onkeydown="checkUsername()"
+            />
+            <label>Tên đăng nhập</label>
+            <span class="message"></span>
+          </div>
+          <div class="input-field" id="email">
+            <span class="icon"><i class="ri-mail-fill"></i></span>
+            <input type="text" required onkeydown="checkEmail()" />
+            <label>Email</label>
+            <span class="message"></span>
+          </div>
+          <div class="input-field" id="first-password">
+            <span class="icon"><i class="ri-eye-close-line"></i></span>
+            <input type="password" required />
+            <label>Mật khẩu</label>
+          </div>
+          <div class="input-field" id="second-password">
+            <span class="icon"><i class="ri-eye-close-line"></i></span>
+            <input type="password" required oninput="checkPassword()" />
+            <label>Nhập lại mật khẩu</label>
+            <span class="message"></span>
+          </div>
+          <button type="submit">Đăng ký</button>
+          <div class="swap">
+            <p>Đã có tài khoản? <a href="#" onclick="login()">Đăng nhập</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./assets/js/login.js"></script>
+  </body>
+</html>

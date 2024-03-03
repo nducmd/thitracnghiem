@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hệ Thống Thi Trắc Nghiệm</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="assets\css\vendor.min.css" />
+    <link rel="stylesheet" href="assets\vendor\icon-set\style.css" />
+
+    <!-- CSS Front Template -->
+    <link rel="stylesheet" href="assets\css\theme.min.css?v=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="center-content">
+          <div class="description">
+            <div class="logo">
+              <a href="">
+                <div class="center-content">
+                  <h3 class="test">Hệ Thống Thi Trắc Nghiệm PTIT</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="ava">
+            <div class="center-content">
+              <a href=""> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="test-content">
+      <div class="center-content" style="margin: 0px">
+        <nav>
+          <div class="nav-bar">
+            <a class="box ml-2" href="">
+              <div class="left-content">
+                <div class="border-box left-content">
+                  <div class="logo">
+                    <i class="fa-solid fa-house-chimney-window"></i>
+                  </div>
+                  <div class="description">Trang chủ</div>
+                </div>
+              </div>
+            </a>
+            <!-- <a class="box" href="">
+                            <div class="left-content">
+                                <div class="border-box left-content">
+                                    <div class="logo">
+                                        <i
+                                            class="fa-solid fa-right-from-bracket"
+                                        ></i>
+                                    </div>
+                                    <div class="description">Thoát</div>
+                                </div>
+                            </div>
+                        </a> -->
+            <a class="" href="">
+              <div class="">
+                <div id="out-test">
+                  <!-- <div class="logo">
+                                        <i
+                                            class="fa-solid fa-right-from-bracket"
+                                        ></i>
+                                    </div> -->
+                  <!-- <div class="description">Thoát</div> -->
+                  <div>Thoát</div>
+                </div>
+              </div>
+            </a>
+            <!-- Other navigation links -->
+          </div>
+        </nav>
+
+        <div class="box-filter-class">
+          <div class="class-filter">
+            <div class="center-content">
+              <input
+                class="filter-input"
+                type="text"
+                id="filterInput"
+                onkeyup="filterClasses()"
+                placeholder="Lọc theo tên bài thi..."
+              />
+              <select id="examType" onchange="filterClasses()">
+                <option value="">Tất cả</option>
+                <option value="Giữa kỳ">Giữa kỳ</option>
+                <option value="Cuối kỳ">Cuối kỳ</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="test-class">
+            <div class="center-content box-class" id="testClassContainer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const testClasses = [
+        {
+          name: "Mạng máy tính",
+          lecturer: "Nguyễn Thanh Thủy",
+          deadlineWeek: "3/3/2023",
+          startTime: "22:00",
+          deadlineTime: "60",
+          type: "Giữa kỳ",
+          url: "./test.html",
+        },
+        {
+          name: "Hệ điều hành",
+          lecturer: "Đinh Xuân Trường",
+          deadlineWeek: "3/3/2023",
+          startTime: "22:00",
+          deadlineTime: "60",
+          type: "Cuối kỳ",
+          url: "",
+        },
+        {
+          name: "Trí tuệ nhân tạo",
+          lecturer: "Nguyễn Tiến Công",
+          deadlineWeek: "3/3/2023",
+          startTime: "22:00",
+          deadlineTime: "60",
+          type: "Cuối kỳ",
+          url: "",
+        },
+        {
+          name: "Lập trình web",
+          lecturer: "Nguyễn Trọng Khánh",
+          deadlineWeek: "3/3/2023",
+          startTime: "22:00",
+          deadlineTime: "60",
+          type: "Giữa kỳ",
+          url: "",
+        },
+        {
+          name: "OOP",
+          lecturer: "Nguyễn Mạnh Sơn",
+          deadlineWeek: "3/3/2023",
+          startTime: "22:00",
+          deadlineTime: "60",
+          type: "Cuối kỳ",
+          url: "",
+        },
+      ];
+
+      function generateTestClasses(classes) {
+        const container = document.getElementById("testClassContainer");
+        container.innerHTML = "";
+        classes.forEach((cls) => {
+          const classHTML = `
+                    <div class="center-content">
+                        <div class="center-content box-class">
+                            <div class="class">
+                                <a href="${cls.url}">
+                                    <div class="name">
+                                        <h1 class="name-class">${cls.name}</h1>
+                                        <h2 class="name-lecturer">GV: ${cls.lecturer}</h2>
+                                    </div>
+                                    <div class="deadline">
+                                        <h2 class="deadline-week">Bắt đầu: ${cls.deadlineWeek} ${cls.startTime}</h2>
+                                        <h3 class="deadline-time">Thời gian làm bài: ${cls.deadlineTime} phút</h3>
+                                    </div>
+                                    <div class="typeTest">
+                                        <h2 class="type">Bài thi: ${cls.type}</h2>
+                                    </div>
+                                    <div class="btn-action">
+                                        <a href="${cls.url}" class="action-test">
+                                            <i class="fa-regular fa-folder"></i>
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+          container.innerHTML += classHTML;
+        });
+      }
+
+      function filterClasses() {
+        const examType = document.getElementById("examType").value;
+        const filterValue = document
+          .getElementById("filterInput")
+          .value.toUpperCase();
+        const filteredClasses = testClasses.filter((cls) => {
+          const nameMatch = cls.name.toUpperCase().indexOf(filterValue) > -1;
+          if (examType === "") {
+            return nameMatch;
+          } else {
+            return nameMatch && cls.type === examType;
+          }
+        });
+        generateTestClasses(filteredClasses);
+      }
+
+      generateTestClasses(testClasses);
+    </script>
+  </body>
+</html>
