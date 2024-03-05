@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./assets/css/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hệ Thống Thi Trắc Nghiệm</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png" />
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
-  <body>
+  <body id="body-test">
     <header>
       <div class="header">
         <div class="center-content">
@@ -19,68 +18,91 @@
               <a href="">
                 <div class="center-content">
                   <h3 class="test">Hệ Thống Thi Trắc Nghiệm PTIT</h3>
+                  <h1 class="test"></h1>
                 </div>
               </a>
             </div>
           </div>
           <div class="ava">
             <div class="center-content">
-              <a href=""> </a>
+              <a href="">
+                <i class="fa-solid fa-user-plus"></i>
+              </a>
             </div>
           </div>
         </div>
       </div>
     </header>
+
     <div class="row">
       <div class="container1">
         <div class="question" id="question1">
-          <p>Câu hỏi đúng/sai: Thủ đô của Việt Nam là Hà Nội?</p>
+          <p>
+            Câu hỏi đúng/sai: HTTP là từ viết tắt của: HyperText Transmision
+            Protocol?
+          </p>
           <ul class="options">
             <li>
-              <input type="radio" name="answer1" value="true" />
-              Đúng
+              <input type="radio" name="answer1" value="A" />
+              A. Đúng
             </li>
             <li>
-              <input type="radio" name="answer1" value="false" />
-              Sai
+              <input type="radio" name="answer1" value="B" />
+              B. Sai
             </li>
           </ul>
           <div class="result" id="result1"></div>
         </div>
         <div class="question" id="question2">
-          <p>Câu hỏi lựa chọn: Đâu là thành phố lớn của Việt Nam?</p>
+          <p>
+            Câu hỏi lựa chọn: Thứ tự của các tầng trong mô hình tham chiếu OSI?
+          </p>
           <ul class="options">
-            <li><input type="radio" name="answer2" value="a" /> Hà Nội</li>
-            <li><input type="radio" name="answer2" value="b" /> Hồ Chí Minh</li>
-            <li><input type="radio" name="answer2" value="c" /> Đà Nẵng</li>
-            <li><input type="radio" name="answer2" value="d" /> Hải Phòng</li>
+            <li>
+              <input type="radio" name="answer2" value="A" /> A. Physical, Data
+              Link, Network, Transport, Session, Presentation, Application
+            </li>
+            <li>
+              <input type="radio" name="answer2" value="B" /> B. Physical, Data
+              Link, Network, Transport, System, Presentation, Application
+            </li>
+            <li>
+              <input type="radio" name="answer2" value="C" /> C. Physical, Data
+              Link, Network, Transform, Session, Presentation, Application
+            </li>
+            <li>
+              <input type="radio" name="answer2" value="D" /> D. Presentation,
+              Data Link, Network, Transport, Session, Physical, Application
+            </li>
           </ul>
           <div class="result" id="result2"></div>
         </div>
         <div class="question" id="question3">
-          <p>Câu hỏi nhiều lựa chọn: Chọn các quốc gia ở châu Á:</p>
+          <p>
+            Câu hỏi nhiều lựa chọn: Ứng dụng nào sử dụng mô hình client/server?
+          </p>
           <ul class="options">
             <li>
-              <input type="checkbox" name="answer3" value="a" />
-              Việt Nam
+              <input type="checkbox" name="answer3" value="A" />
+              A. Email
             </li>
             <li>
-              <input type="checkbox" name="answer3" value="b" />
-              Thái Lan
+              <input type="checkbox" name="answer3" value="B" />
+              B. Bit Torent
             </li>
             <li>
-              <input type="checkbox" name="answer3" value="c" />
-              Nhật Bản
+              <input type="checkbox" name="answer3" value="C" />
+              C. Skype
             </li>
             <li>
-              <input type="checkbox" name="answer3" value="d" />
-              Mông Cổ
+              <input type="checkbox" name="answer3" value="D" />
+              D. Web
             </li>
           </ul>
           <div class="result" id="result3"></div>
         </div>
         <div class="question" id="question4">
-          <p>Câu hỏi tự luận: Viết tên một quốc gia ở châu Á?</p>
+          <p>Câu hỏi tự luận: Mã trạng thái nào của HTTP có ý nghĩa là OK?</p>
           <textarea id="essayAnswer"></textarea>
           <div class="result" id="result4"></div>
         </div>
