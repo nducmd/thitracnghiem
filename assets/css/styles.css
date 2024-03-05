@@ -439,9 +439,15 @@ button:hover {
 .sub-box {
     background-color: #bb2019;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     margin: 0px 0px;
     border-radius: 10px 10px 0px 0px;
+    font-size: 2rem;
+}
+
+#totalScore,
+#totalTime {
+    font-weight: bold;
 }
 
 .green {
